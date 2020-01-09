@@ -110,20 +110,20 @@
             "name": "_term"
           },
           {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "whitespace"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "SYMBOL",
-            "name": "_term"
+            "type": "REPEAT",
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "whitespace"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_term"
+                }
+              ]
+            }
           }
         ]
       }

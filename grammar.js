@@ -26,8 +26,10 @@ module.exports = grammar({
         1,
         seq(
           $._term, 
-          optional($.whitespace),
-          $._term)),
+          repeat(
+            seq(
+            $.whitespace,
+            $._term)))),
     _term: $ => choice(
       $.identifier,
       $.parethesized,
